@@ -48,7 +48,20 @@ effacer1.addEventListener("click",function(){
 })
 const effacer2=document.getElementById("clear");
 effacer2.addEventListener("click",function(){
+    affichage="";
     resultat.innerText=resultat.innerText.slice(0,-1);
+})
+const virgule=document.getElementById("virgule")
+virgule.addEventListener("click",function(){
+    if (operation===null){
+        affichage+=".";
+        resultat.innerText=affichage
+    }
+    else {
+        affichage+=".";
+        resultat.innerText=affichage;
+        
+    }
 })
 document.getElementById("egal").addEventListener("click", function () {
     nombre2 = parseFloat(affichage);
@@ -62,7 +75,7 @@ document.getElementById("egal").addEventListener("click", function () {
     else if(operation==="x"){
         resultatfinal=nombre1*nombre2;
     }
-    else if(operation=":"){
+    else if(operation===":"){
         resultatfinal=nombre1/nombre2;
     }
 
